@@ -1,5 +1,11 @@
 # better-ajv-errors
 
+## 0.7.0
+
+### Minor Changes
+
+- 5b236a1: Require Node 10
+
 ## 0.6.10
 
 ### Patch Changes
