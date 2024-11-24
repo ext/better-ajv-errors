@@ -27,7 +27,7 @@ jobs:
         run: |
           npm run build
           npm pack
-          npx npm-pkg-lint
+          npx npm-pkg-lint --ignore-node-version=16 --allow-dependency=eslint
 
       - name: Run tests
         run: npm run test-ci
