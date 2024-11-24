@@ -2,7 +2,10 @@
   "name": "@sidvind/better-ajv-errors",
   "version": "3.0.1",
   "description": "JSON Schema validation for Human",
-  "repository": "https://github.com/ext/better-ajv-errors.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ext/better-ajv-errors.git"
+  },
   "homepage": "https://github.com/ext/better-ajv-errors",
   "bugs": "https://github.com/ext/better-ajv-errors/issues",
   "sideEffects": false,
@@ -84,7 +87,7 @@
     "jest-serializer-ansi-escapes": "3.0.0",
     "jsonpointer": "5.0.1",
     "leven": "3.1.0",
-    "npm-pkg-lint": "2.4.1",
+    "npm-pkg-lint": "3.10.2",
     "prettier": "3.3.3",
     "tsd": "0.31.2"
   },
