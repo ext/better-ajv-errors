@@ -68,7 +68,7 @@
     "@changesets/cli": "2.28.1",
     "@changesets/write": "0.4.0",
     "@html-validate/release-scripts": "6.8.0",
-    "@humanwhocodes/momoa": "3.3.7",
+    "@humanwhocodes/momoa": "3.3.8",
     "ajv": "8.17.1",
     "ajv6": "npm:ajv@6.12.3",
     "ajv7": "npm:ajv@7.0.0",
