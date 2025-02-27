@@ -76,7 +76,7 @@
     "esbuild": "0.25.0",
     "esbuild-jest2": "0.6.7",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "10.0.1",
+    "eslint-config-prettier": "10.0.2",
     "eslint-plugin-jest": "28.11.0",
     "eslint-plugin-prettier": "5.2.3",
     "git-format-staged": "3.1.1",
