@@ -25,7 +25,6 @@ export default function getMetaFromPath(
       case 'Array':
         return obj.elements[pointer].value;
       default:
-        // eslint-disable-next-line no-console
         console.log(obj);
     }
   }, jsonAst.body);
