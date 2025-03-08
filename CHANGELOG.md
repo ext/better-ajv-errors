@@ -1,5 +1,12 @@
 # better-ajv-errors
 
+## 4.0.0
+
+### Major Changes
+
+- d00a368: require nodejs v18 or later
+- 704e0dc: require ajv v7 or later
+
 ## 3.0.1
 
 ### Patch Changes
