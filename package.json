@@ -70,7 +70,6 @@
     "@html-validate/release-scripts": "6.8.0",
     "@humanwhocodes/momoa": "3.3.8",
     "ajv": "8.17.1",
-    "ajv6": "npm:ajv@6.12.3",
     "ajv7": "npm:ajv@7.0.0",
     "ajv8": "npm:ajv@8.0.0",
     "esbuild": "0.25.0",
@@ -92,7 +91,7 @@
     "tsd": "0.31.2"
   },
   "peerDependencies": {
-    "ajv": "^6.12.3 || ^7.0.0 || ^8.0.0"
+    "ajv": "^7.0.0 || ^8.0.0"
   },
   "externalDependencies": [
     "kleur"
@@ -127,9 +126,6 @@
       "gitlab>html-validate/renovate-config"
     ],
     "ignoreDeps": [
-      "ajv4",
-      "ajv5",
-      "ajv6",
       "ajv7",
       "ajv8"
     ],
