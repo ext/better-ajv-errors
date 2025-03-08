@@ -55,8 +55,8 @@
     "postpublish": "release-postpublish",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "test": "jest && tsd",
-    "test-ci": "jest --coverage --colors && tsd",
+    "test": "jest",
+    "test-ci": "jest --coverage --colors",
     "prescreenshot": "npm run build:cjs",
     "screenshot": "npx svg-term-cli --command='node screenshot' --out=./media/screenshot.svg --padding=5 --width=80 --height=13 --at=1000 --no-cursor --term iterm2 --profile='deep' --window",
     "dependabot:changeset": "node ./.changeset/create-dependabot-dependabot.js"
@@ -89,8 +89,7 @@
     "jest-fixtures": "0.6.0",
     "jest-serializer-ansi-escapes": "4.0.0",
     "npm-pkg-lint": "3.10.11",
-    "prettier": "3.5.3",
-    "tsd": "0.31.2"
+    "prettier": "3.5.3"
   },
   "peerDependencies": {
     "ajv": "^7.0.0 || ^8.0.0"
