@@ -32,7 +32,7 @@
   "license": "Apache-2.0",
   "types": "./typings.d.ts",
   "engines": {
-    "node": ">= 16.14"
+    "node": ">= 18"
   },
   "files": [
     "lib",
