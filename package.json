@@ -122,25 +122,5 @@
     "transform": {
       "^.+\\.js$": "esbuild-jest2"
     }
-  },
-  "renovate": {
-    "extends": [
-      "gitlab>html-validate/renovate-config"
-    ],
-    "ignoreDeps": [
-      "ajv7",
-      "ajv8"
-    ],
-    "packageRules": [
-      {
-        "description": "Bundled runtime dependencies",
-        "matchPackageNames": [
-          "@humanwhocodes/momoa",
-          "jsonpointer",
-          "leven"
-        ],
-        "semanticCommitType": "fix"
-      }
-    ]
   }
 }
