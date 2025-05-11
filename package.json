@@ -71,7 +71,7 @@
     "@changesets/cli": "2.29.3",
     "@changesets/write": "0.4.0",
     "@eslint/js": "9.26.0",
-    "@html-validate/release-scripts": "6.8.0",
+    "@html-validate/release-scripts": "6.8.3",
     "ajv": "8.17.1",
     "ajv7": "npm:ajv@7.0.0",
     "ajv8": "npm:ajv@8.0.0",
