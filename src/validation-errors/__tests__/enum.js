@@ -1,12 +1,15 @@
+import path from 'node:path';
 import { parse } from '@humanwhocodes/momoa';
 import { getSchemaAndData } from '../../test-helpers';
 import EnumValidationError from '../enum';
+
+const fixturePath = path.join(__dirname, '..', '__fixtures__');
 
 describe('Enum', () => {
   describe('when value is an object', () => {
     let schema, data, jsonRaw, jsonAst;
     beforeAll(async () => {
-      [schema, data] = await getSchemaAndData('enum', __dirname);
+      [schema, data] = await getSchemaAndData('enum', fixturePath);
       jsonRaw = JSON.stringify(data, null, 2);
       jsonAst = parse(jsonRaw);
     });
@@ -60,7 +63,7 @@ describe('Enum', () => {
   describe('when value is a primitive', () => {
     let schema, data, jsonRaw, jsonAst;
     beforeAll(async () => {
-      [schema, data] = await getSchemaAndData('enum-string', __dirname);
+      [schema, data] = await getSchemaAndData('enum-string', fixturePath);
       jsonRaw = JSON.stringify(data, null, 2);
       jsonAst = parse(jsonRaw);
     });
