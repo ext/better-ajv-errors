@@ -1,10 +1,13 @@
+import path from 'node:path';
 import Ajv from 'ajv';
 import betterAjvErrors from '../../';
 import { getSchemaAndData } from '../../test-helpers';
 
+const fixturePath = path.join(__dirname, '..', '__fixtures__');
+
 describe('Main', () => {
   it('should support js output format for default errors', async () => {
-    const [schema, data] = await getSchemaAndData('default', __dirname);
+    const [schema, data] = await getSchemaAndData('default', fixturePath);
 
     const ajv = new Ajv();
     const validate = ajv.compile(schema);
@@ -18,7 +21,7 @@ describe('Main', () => {
   });
 
   it('should support js output format for required errors', async () => {
-    const [schema, data] = await getSchemaAndData('required', __dirname);
+    const [schema, data] = await getSchemaAndData('required', fixturePath);
 
     const ajv = new Ajv();
     const validate = ajv.compile(schema);
@@ -34,7 +37,7 @@ describe('Main', () => {
   it('should support js output format for additionalProperties errors', async () => {
     const [schema, data] = await getSchemaAndData(
       'additionalProperties',
-      __dirname
+      fixturePath
     );
 
     const ajv = new Ajv();
@@ -49,7 +52,7 @@ describe('Main', () => {
   });
 
   it('should support js output format for enum errors', async () => {
-    const [schema, data] = await getSchemaAndData('enum', __dirname);
+    const [schema, data] = await getSchemaAndData('enum', fixturePath);
 
     const ajv = new Ajv();
     const validate = ajv.compile(schema);

@@ -1,8 +1,11 @@
+import path from 'node:path';
 import Ajv from 'ajv';
 import Ajv7 from 'ajv7';
 import Ajv8 from 'ajv8';
 import { getSchemaAndData } from '../test-helpers';
 import betterAjvErrors from '../';
+
+const fixturePath = path.join(__dirname, '..', '__fixtures__');
 
 function ajv7() {
   return new Ajv7();
@@ -22,7 +25,7 @@ describe.each([
   ['AJV latest', latest],
 ])('%s', (_, getAjvInstance) => {
   it('should output error with reconstructed codeframe', async () => {
-    const [schema, data] = await getSchemaAndData('default', __dirname);
+    const [schema, data] = await getSchemaAndData('default', fixturePath);
     const ajv = getAjvInstance();
     const validate = ajv.compile(schema);
     const valid = validate(data);
@@ -36,7 +39,7 @@ describe.each([
   });
 
   it('should output error with codeframe', async () => {
-    const [schema, data, json] = await getSchemaAndData('default', __dirname);
+    const [schema, data, json] = await getSchemaAndData('default', fixturePath);
     const ajv = getAjvInstance();
     const validate = ajv.compile(schema);
     const valid = validate(data);
@@ -50,7 +53,7 @@ describe.each([
   });
 
   it('should output proper error for enumeration', async () => {
-    const [schema, data] = await getSchemaAndData('enum', __dirname);
+    const [schema, data] = await getSchemaAndData('enum', fixturePath);
     const ajv = getAjvInstance();
     const validate = ajv.compile(schema);
     const valid = validate(data);
@@ -63,7 +66,7 @@ describe.each([
     expect(res).toMatchSnapshot();
   });
   it('should output proper error for enumeration in anyOf', async () => {
-    const [schema, data] = await getSchemaAndData('enum-anyof', __dirname);
+    const [schema, data] = await getSchemaAndData('enum-anyof', fixturePath);
     const ajv = getAjvInstance();
     const validate = ajv.compile(schema);
     const valid = validate(data);
