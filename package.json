@@ -85,7 +85,7 @@
     "globals": "16.2.0",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
-    "jest": "30.0.0",
+    "jest": "30.0.1",
     "jest-serializer-ansi-escapes": "4.0.0",
     "npm-pkg-lint": "4.0.0",
     "prettier": "3.5.3"
