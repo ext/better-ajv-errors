@@ -62,7 +62,7 @@
     "dependabot:changeset": "node ./.changeset/create-dependabot-dependabot.js"
   },
   "dependencies": {
-    "@humanwhocodes/momoa": "3.3.8",
+    "@humanwhocodes/momoa": "3.3.9",
     "jsonpointer": "5.0.1",
     "kleur": "^4.1.0",
     "leven": "3.1.0"
