@@ -87,7 +87,7 @@
     "is-ci": "4.1.0",
     "jest": "30.0.5",
     "jest-serializer-ansi-escapes": "4.0.0",
-    "npm-pkg-lint": "4.0.2",
+    "npm-pkg-lint": "4.0.3",
     "prettier": "3.6.2"
   },
   "peerDependencies": {
