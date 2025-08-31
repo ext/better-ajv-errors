@@ -113,9 +113,8 @@ Or, use `js` if you are planning to use this with some API. Your output will loo
   {
     start: { line: 6, column: 15, offset: 70 },
     end: { line: 6, column: 26, offset: 81 },
-    error:
-      '/content/0/type should be equal to one of the allowed values: panel, paragraph, ...',
-    suggestion: 'Did you mean paragraph?',
+    error: "/content/0/type should be equal to one of the allowed values: panel, paragraph, ...",
+    suggestion: "Did you mean paragraph?",
   },
 ];
 ```
