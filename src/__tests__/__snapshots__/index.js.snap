@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AJV latest should output error with codeframe 1`] = `
 "<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
