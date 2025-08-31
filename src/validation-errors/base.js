@@ -1,60 +1,49 @@
-import { codeFrameColumns } from '../code-frame-columns';
-import { getMetaFromPath, getDecoratedDataPath } from '../json';
+import { codeFrameColumns } from "../code-frame-columns";
+import { getMetaFromPath, getDecoratedDataPath } from "../json";
 
 export default class BaseValidationError {
-  constructor(
-    options = { isIdentifierLocation: false },
-    { data, schema, jsonAst, jsonRaw }
-  ) {
-    this.options = options;
-    this.data = data;
-    this.schema = schema;
-    this.jsonAst = jsonAst;
-    this.jsonRaw = jsonRaw;
-  }
+	constructor(options = { isIdentifierLocation: false }, { data, schema, jsonAst, jsonRaw }) {
+		this.options = options;
+		this.data = data;
+		this.schema = schema;
+		this.jsonAst = jsonAst;
+		this.jsonRaw = jsonRaw;
+	}
 
-  getLocation(dataPath = this.instancePath) {
-    const { isIdentifierLocation, isSkipEndLocation } = this.options;
-    const { loc } = getMetaFromPath(
-      this.jsonAst,
-      dataPath,
-      isIdentifierLocation
-    );
-    return {
-      start: loc.start,
-      end: isSkipEndLocation ? undefined : loc.end,
-    };
-  }
+	getLocation(dataPath = this.instancePath) {
+		const { isIdentifierLocation, isSkipEndLocation } = this.options;
+		const { loc } = getMetaFromPath(this.jsonAst, dataPath, isIdentifierLocation);
+		return {
+			start: loc.start,
+			end: isSkipEndLocation ? undefined : loc.end,
+		};
+	}
 
-  getDecoratedPath(dataPath = this.instancePath) {
-    const decoratedPath = getDecoratedDataPath(this.jsonAst, dataPath);
-    return decoratedPath;
-  }
+	getDecoratedPath(dataPath = this.instancePath) {
+		const decoratedPath = getDecoratedDataPath(this.jsonAst, dataPath);
+		return decoratedPath;
+	}
 
-  getCodeFrame(message, dataPath = this.instancePath) {
-    return codeFrameColumns(this.jsonRaw, this.getLocation(dataPath), {
-      message,
-    });
-  }
+	getCodeFrame(message, dataPath = this.instancePath) {
+		return codeFrameColumns(this.jsonRaw, this.getLocation(dataPath), {
+			message,
+		});
+	}
 
-  /**
-   * @return {string}
-   */
-  get instancePath() {
-    return typeof this.options.instancePath !== 'undefined'
-      ? this.options.instancePath
-      : this.options.dataPath;
-  }
+	/**
+	 * @return {string}
+	 */
+	get instancePath() {
+		return typeof this.options.instancePath !== "undefined"
+			? this.options.instancePath
+			: this.options.dataPath;
+	}
 
-  print() {
-    throw new Error(
-      `Implement the 'print' method inside ${this.constructor.name}!`
-    );
-  }
+	print() {
+		throw new Error(`Implement the 'print' method inside ${this.constructor.name}!`);
+	}
 
-  getError() {
-    throw new Error(
-      `Implement the 'getError' method inside ${this.constructor.name}!`
-    );
-  }
+	getError() {
+		throw new Error(`Implement the 'getError' method inside ${this.constructor.name}!`);
+	}
 }

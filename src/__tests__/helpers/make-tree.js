@@ -1,16 +1,16 @@
-import { makeTree } from '../../helpers';
+import { makeTree } from "../../helpers";
 
-describe('makeTree', () => {
-  it('works on empty array', async () => {
-    expect(makeTree([])).toMatchInlineSnapshot(`
+describe("makeTree", () => {
+	it("works on empty array", async () => {
+		expect(makeTree([])).toMatchInlineSnapshot(`
       {
         "children": {},
       }
     `);
-  });
+	});
 
-  it('works on root dataPath', async () => {
-    expect(makeTree([{ dataPath: '' }])).toMatchInlineSnapshot(`
+	it("works on root dataPath", async () => {
+		expect(makeTree([{ dataPath: "" }])).toMatchInlineSnapshot(`
       {
         "children": {
           "": {
@@ -24,10 +24,10 @@ describe('makeTree', () => {
         },
       }
     `);
-  });
+	});
 
-  it('works on nested dataPath', async () => {
-    expect(makeTree([{ dataPath: '/root/child' }])).toMatchInlineSnapshot(`
+	it("works on nested dataPath", async () => {
+		expect(makeTree([{ dataPath: "/root/child" }])).toMatchInlineSnapshot(`
       {
         "children": {
           "/root": {
@@ -46,12 +46,11 @@ describe('makeTree', () => {
         },
       }
     `);
-  });
+	});
 
-  it('works on array dataPath', async () => {
-    expect(
-      makeTree([{ dataPath: '/root/child/0' }, { dataPath: '/root/child/1' }])
-    ).toMatchInlineSnapshot(`
+	it("works on array dataPath", async () => {
+		expect(makeTree([{ dataPath: "/root/child/0" }, { dataPath: "/root/child/1" }]))
+			.toMatchInlineSnapshot(`
       {
         "children": {
           "/root": {
@@ -78,15 +77,15 @@ describe('makeTree', () => {
         },
       }
     `);
-  });
+	});
 
-  it('works on array item dataPath', async () => {
-    expect(
-      makeTree([
-        { dataPath: '/root/child/0/grand-child' },
-        { dataPath: '/root/child/1/grand-child' },
-      ])
-    ).toMatchInlineSnapshot(`
+	it("works on array item dataPath", async () => {
+		expect(
+			makeTree([
+				{ dataPath: "/root/child/0/grand-child" },
+				{ dataPath: "/root/child/1/grand-child" },
+			]),
+		).toMatchInlineSnapshot(`
       {
         "children": {
           "/root": {
@@ -123,5 +122,5 @@ describe('makeTree', () => {
         },
       }
     `);
-  });
+	});
 });
