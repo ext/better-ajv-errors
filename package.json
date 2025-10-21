@@ -86,7 +86,7 @@
     }
   },
   "dependencies": {
-    "@humanwhocodes/momoa": "3.3.9",
+    "@humanwhocodes/momoa": "3.3.10",
     "jsonpointer": "5.0.1",
     "kleur": "^4.1.0",
     "leven": "3.1.0"
