@@ -1,5 +1,11 @@
 # better-ajv-errors
 
+## 4.0.1
+
+### Patch Changes
+
+- d90fe6a: dependency updates
+
 ## 4.0.0
 
 ### Major Changes
