@@ -95,7 +95,7 @@
     "@changesets/cli": "2.29.8",
     "@changesets/write": "0.4.0",
     "@eslint/js": "9.39.1",
-    "@html-validate/prettier-config": "3.1.9",
+    "@html-validate/prettier-config": "3.1.10",
     "@html-validate/release-scripts": "7.1.0",
     "@types/node": "18.19.130",
     "ajv": "8.17.1",
