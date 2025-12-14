@@ -94,7 +94,7 @@
   "devDependencies": {
     "@changesets/cli": "2.29.8",
     "@changesets/write": "0.4.0",
-    "@eslint/js": "9.39.1",
+    "@eslint/js": "9.39.2",
     "@html-validate/prettier-config": "3.1.10",
     "@html-validate/release-scripts": "7.1.0",
     "@types/node": "18.19.130",
@@ -103,7 +103,7 @@
     "ajv8": "npm:ajv@8.0.0",
     "esbuild": "0.27.1",
     "esbuild-jest2": "0.6.7",
-    "eslint": "9.39.1",
+    "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-jest": "29.2.2",
     "eslint-plugin-prettier": "5.5.4",
