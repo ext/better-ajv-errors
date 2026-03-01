@@ -96,7 +96,7 @@
     "@changesets/write": "0.4.0",
     "@eslint/js": "9.39.3",
     "@html-validate/prettier-config": "3.1.15",
-    "@html-validate/release-scripts": "7.1.0",
+    "@html-validate/release-scripts": "7.1.15",
     "@types/node": "18.19.130",
     "ajv": "8.18.0",
     "ajv7": "npm:ajv@7.0.0",
