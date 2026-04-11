@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { makeTree } from "../../helpers";
 
 describe("makeTree", () => {
