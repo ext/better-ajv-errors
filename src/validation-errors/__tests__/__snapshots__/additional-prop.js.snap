@@ -1,13 +1,13 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Additional properties prints correctly 1`] = `
+exports[`Additional properties > prints correctly 1`] = `
 [
-  "<red><bold>ADDITIONAL PROPERTY</intensity> should NOT have additional properties</color>
-",
-  "  1 | {
+  <red><bold>ADDITIONAL PROPERTY</intensity> should NOT have additional properties</color>
+,
+    1 | {
   2 |   "foo": true,
 > 3 |   "bar": false
     |   ^^^^^ <magenta>bar</color> is not expected to be here!
-  4 | }",
+  4 | },
 ]
 `;

@@ -1,4 +1,4 @@
-import jest from "eslint-plugin-jest";
+import vitest from "@vitest/eslint-plugin";
 import prettier from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 import js from "@eslint/js";
@@ -22,12 +22,13 @@ export default [
 	},
 
 	{
-		name: "Jest configuration",
+		name: "Vitest configuration",
 		files: ["**/__tests__/**"],
-		plugins: { jest },
+		plugins: { vitest },
 		languageOptions: {
-			globals: jest.environments.globals.globals,
+			globals: vitest.environments.env.globals,
 		},
+		rules: vitest.configs.recommended.rules,
 	},
 
 	{

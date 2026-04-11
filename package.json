@@ -56,35 +56,10 @@
     "release": "changeset publish",
     "prescreenshot": "npm run build:cjs",
     "screenshot": "npx svg-term-cli --command='node screenshot' --out=./media/screenshot.svg --padding=5 --width=80 --height=13 --at=1000 --no-cursor --term iterm2 --profile='deep' --window",
-    "test": "jest",
-    "test-ci": "jest --coverage --colors"
+    "test": "vitest run",
+    "test-ci": "vitest run --coverage"
   },
   "prettier": "@html-validate/prettier-config",
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.[jt]s",
-      "!**/__tests__/",
-      "!**/*.d.ts",
-      "!**/index.[jt]s"
-    ],
-    "coverageReporters": [
-      "text",
-      "text-summary",
-      "html",
-      "json",
-      "lcov"
-    ],
-    "snapshotSerializers": [
-      "jest-serializer-ansi-escapes"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.js"
-    ],
-    "transform": {
-      "^.+\\.js$": "esbuild-jest2"
-    }
-  },
   "dependencies": {
     "@humanwhocodes/momoa": "3.3.10",
     "jsonpointer": "5.0.1",
@@ -98,22 +73,22 @@
     "@html-validate/prettier-config": "3.1.16",
     "@html-validate/release-scripts": "7.1.19",
     "@types/node": "20.19.39",
+    "@vitest/coverage-v8": "3.2.0",
+    "@vitest/eslint-plugin": "1.6.15",
     "ajv": "8.18.0",
     "ajv7": "npm:ajv@7.0.0",
     "ajv8": "npm:ajv@8.0.0",
     "esbuild": "0.28.0",
-    "esbuild-jest2": "0.6.7",
     "eslint": "10.2.0",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-jest": "29.15.2",
     "eslint-plugin-prettier": "5.5.5",
     "git-format-staged": "4.0.1",
     "globals": "17.4.0",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
-    "jest": "30.3.0",
-    "jest-serializer-ansi-escapes": "5.0.0",
-    "npm-pkg-lint": "4.6.4"
+    "npm-pkg-lint": "4.6.4",
+    "pretty-ansi": "4.0.0",
+    "vitest": "3.2.0"
   },
   "peerDependencies": {
     "ajv": "^7.0.0 || ^8.0.0"
