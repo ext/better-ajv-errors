@@ -1,5 +1,11 @@
 # better-ajv-errors
 
+## 5.0.0
+
+### Major Changes
+
+- cd54fc1: Require NodeJS v20 or later
+
 ## 4.0.1
 
 ### Patch Changes
