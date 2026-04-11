@@ -16,5 +16,3 @@ jobs:
         run: npm ci
       - name: npm-pkg-lint
         uses: ext/npm-pkg-lint@master
-        with:
-          ignore-node-version: 18

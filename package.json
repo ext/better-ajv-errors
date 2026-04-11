@@ -97,7 +97,7 @@
     "@eslint/js": "10.0.1",
     "@html-validate/prettier-config": "3.1.16",
     "@html-validate/release-scripts": "7.1.19",
-    "@types/node": "18.19.130",
+    "@types/node": "20.19.39",
     "ajv": "8.18.0",
     "ajv7": "npm:ajv@7.0.0",
     "ajv8": "npm:ajv@8.0.0",
@@ -119,7 +119,7 @@
     "ajv": "^7.0.0 || ^8.0.0"
   },
   "engines": {
-    "node": ">= 18"
+    "node": "^20.19 || ^22.12 || >= 24.0"
   },
   "externalDependencies": [
     "kleur"
