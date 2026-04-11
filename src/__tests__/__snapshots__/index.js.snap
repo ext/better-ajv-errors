@@ -1,7 +1,7 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`AJV latest should output error with codeframe 1`] = `
-"<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
+exports[`AJV latest > should output error with codeframe 1`] = `
+<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
 <red>(paragraph, codeBlock, blockquote)</color>
 
   2 |   "type": "doc",
@@ -9,11 +9,11 @@ exports[`AJV latest should output error with codeframe 1`] = `
 > 4 |   "content": [{ "type": "paragarph" }]
     |                         ^^^^^^^^^^^ Did you mean <magenta>paragraph</color> here?
   5 | }
-  6 |"
+  6 |
 `;
 
-exports[`AJV latest should output error with reconstructed codeframe 1`] = `
-"<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
+exports[`AJV latest > should output error with reconstructed codeframe 1`] = `
+<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
 <red>(paragraph, codeBlock, blockquote)</color>
 
   4 |   "content": [
@@ -22,21 +22,21 @@ exports[`AJV latest should output error with reconstructed codeframe 1`] = `
     |               ^^^^^^^^^^^ Did you mean <magenta>paragraph</color> here?
   7 |     }
   8 |   ]
-  9 | }"
+  9 | }
 `;
 
-exports[`AJV latest should output proper error for enumeration 1`] = `
-"<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
+exports[`AJV latest > should output proper error for enumeration 1`] = `
+<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
 <red>(foo, bar)</color>
 
   1 | {
 > 2 |   "id": "baz"
     |         ^^^^^ Did you mean <magenta>bar</color> here?
-  3 | }"
+  3 | }
 `;
 
-exports[`AJV latest should output proper error for enumeration in anyOf 1`] = `
-"<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
+exports[`AJV latest > should output proper error for enumeration in anyOf 1`] = `
+<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
 <red>(foo, bar)</color>
 
   1 | {
@@ -56,11 +56,11 @@ exports[`AJV latest should output proper error for enumeration in anyOf 1`] = `
   1 | {
 > 2 |   "id": "baz"
     |         ^^^^^ <magenta>anyOf</color> must match a schema in anyOf
-  3 | }"
+  3 | }
 `;
 
-exports[`AJV v7 should output error with codeframe 1`] = `
-"<red><bold>ENUM</intensity> should be equal to one of the allowed values</color>
+exports[`AJV v7 > should output error with codeframe 1`] = `
+<red><bold>ENUM</intensity> should be equal to one of the allowed values</color>
 <red>(paragraph, codeBlock, blockquote)</color>
 
   2 |   "type": "doc",
@@ -68,11 +68,11 @@ exports[`AJV v7 should output error with codeframe 1`] = `
 > 4 |   "content": [{ "type": "paragarph" }]
     |                         ^^^^^^^^^^^ Did you mean <magenta>paragraph</color> here?
   5 | }
-  6 |"
+  6 |
 `;
 
-exports[`AJV v7 should output error with reconstructed codeframe 1`] = `
-"<red><bold>ENUM</intensity> should be equal to one of the allowed values</color>
+exports[`AJV v7 > should output error with reconstructed codeframe 1`] = `
+<red><bold>ENUM</intensity> should be equal to one of the allowed values</color>
 <red>(paragraph, codeBlock, blockquote)</color>
 
   4 |   "content": [
@@ -81,21 +81,21 @@ exports[`AJV v7 should output error with reconstructed codeframe 1`] = `
     |               ^^^^^^^^^^^ Did you mean <magenta>paragraph</color> here?
   7 |     }
   8 |   ]
-  9 | }"
+  9 | }
 `;
 
-exports[`AJV v7 should output proper error for enumeration 1`] = `
-"<red><bold>ENUM</intensity> should be equal to one of the allowed values</color>
+exports[`AJV v7 > should output proper error for enumeration 1`] = `
+<red><bold>ENUM</intensity> should be equal to one of the allowed values</color>
 <red>(foo, bar)</color>
 
   1 | {
 > 2 |   "id": "baz"
     |         ^^^^^ Did you mean <magenta>bar</color> here?
-  3 | }"
+  3 | }
 `;
 
-exports[`AJV v7 should output proper error for enumeration in anyOf 1`] = `
-"<red><bold>ENUM</intensity> should be equal to one of the allowed values</color>
+exports[`AJV v7 > should output proper error for enumeration in anyOf 1`] = `
+<red><bold>ENUM</intensity> should be equal to one of the allowed values</color>
 <red>(foo, bar)</color>
 
   1 | {
@@ -115,11 +115,11 @@ exports[`AJV v7 should output proper error for enumeration in anyOf 1`] = `
   1 | {
 > 2 |   "id": "baz"
     |         ^^^^^ <magenta>anyOf</color> should match some schema in anyOf
-  3 | }"
+  3 | }
 `;
 
-exports[`AJV v8 should output error with codeframe 1`] = `
-"<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
+exports[`AJV v8 > should output error with codeframe 1`] = `
+<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
 <red>(paragraph, codeBlock, blockquote)</color>
 
   2 |   "type": "doc",
@@ -127,11 +127,11 @@ exports[`AJV v8 should output error with codeframe 1`] = `
 > 4 |   "content": [{ "type": "paragarph" }]
     |                         ^^^^^^^^^^^ Did you mean <magenta>paragraph</color> here?
   5 | }
-  6 |"
+  6 |
 `;
 
-exports[`AJV v8 should output error with reconstructed codeframe 1`] = `
-"<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
+exports[`AJV v8 > should output error with reconstructed codeframe 1`] = `
+<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
 <red>(paragraph, codeBlock, blockquote)</color>
 
   4 |   "content": [
@@ -140,21 +140,21 @@ exports[`AJV v8 should output error with reconstructed codeframe 1`] = `
     |               ^^^^^^^^^^^ Did you mean <magenta>paragraph</color> here?
   7 |     }
   8 |   ]
-  9 | }"
+  9 | }
 `;
 
-exports[`AJV v8 should output proper error for enumeration 1`] = `
-"<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
+exports[`AJV v8 > should output proper error for enumeration 1`] = `
+<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
 <red>(foo, bar)</color>
 
   1 | {
 > 2 |   "id": "baz"
     |         ^^^^^ Did you mean <magenta>bar</color> here?
-  3 | }"
+  3 | }
 `;
 
-exports[`AJV v8 should output proper error for enumeration in anyOf 1`] = `
-"<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
+exports[`AJV v8 > should output proper error for enumeration in anyOf 1`] = `
+<red><bold>ENUM</intensity> must be equal to one of the allowed values</color>
 <red>(foo, bar)</color>
 
   1 | {
@@ -174,5 +174,5 @@ exports[`AJV v8 should output proper error for enumeration in anyOf 1`] = `
   1 | {
 > 2 |   "id": "baz"
     |         ^^^^^ <magenta>anyOf</color> must match a schema in anyOf
-  3 | }"
+  3 | }
 `;
