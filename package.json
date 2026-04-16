@@ -74,7 +74,7 @@
     "@html-validate/release-scripts": "7.1.19",
     "@types/node": "20.19.39",
     "@vitest/coverage-v8": "4.1.4",
-    "@vitest/eslint-plugin": "1.6.15",
+    "@vitest/eslint-plugin": "1.6.16",
     "ajv": "8.18.0",
     "ajv7": "npm:ajv@7.0.0",
     "ajv8": "npm:ajv@8.0.0",
