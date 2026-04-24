@@ -71,7 +71,7 @@
     "@changesets/write": "0.4.0",
     "@eslint/js": "10.0.1",
     "@html-validate/prettier-config": "3.1.18",
-    "@html-validate/release-scripts": "7.1.19",
+    "@html-validate/release-scripts": "7.1.20",
     "@types/node": "20.19.39",
     "@vitest/coverage-v8": "4.1.5",
     "@vitest/eslint-plugin": "1.6.16",
