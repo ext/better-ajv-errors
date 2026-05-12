@@ -1,5 +1,12 @@
 # better-ajv-errors
 
+## 6.0.0
+
+### Major Changes
+
+- 81c894d: AJV v8 or later is now required
+- 1cb4d7f: NodeJS v22 or later is now required
+
 ## 5.0.0
 
 ### Major Changes
