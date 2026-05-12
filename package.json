@@ -76,7 +76,6 @@
     "@vitest/coverage-v8": "4.1.5",
     "@vitest/eslint-plugin": "1.6.17",
     "ajv": "8.20.0",
-    "ajv7": "npm:ajv@7.0.0",
     "ajv8": "npm:ajv@8.0.0",
     "esbuild": "0.28.0",
     "eslint": "10.3.0",
@@ -91,7 +90,7 @@
     "vitest": "4.1.5"
   },
   "peerDependencies": {
-    "ajv": "^7.0.0 || ^8.0.0"
+    "ajv": "^8.0.0"
   },
   "engines": {
     "node": "^22.12 || >= 24.0"
