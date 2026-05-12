@@ -1,16 +1,11 @@
 import { describe, it, expect } from "vitest";
 import path from "node:path";
 import Ajv from "ajv";
-import Ajv7 from "ajv7";
 import Ajv8 from "ajv8";
 import { getSchemaAndData } from "../test-helpers";
 import betterAjvErrors from "../";
 
 const fixturePath = path.join(__dirname, "..", "__fixtures__");
-
-function ajv7() {
-	return new Ajv7();
-}
 
 function ajv8() {
 	return new Ajv8();
@@ -21,7 +16,6 @@ function latest() {
 }
 
 describe.each([
-	["AJV v7", ajv7],
 	["AJV v8", ajv8],
 	["AJV latest", latest],
 ])("%s", (_, getAjvInstance) => {
