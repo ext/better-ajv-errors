@@ -2,12 +2,16 @@ import { codeFrameColumns } from "../code-frame-columns";
 import { getMetaFromPath, getDecoratedDataPath } from "../json";
 
 export default class BaseValidationError {
-	constructor(options = { isIdentifierLocation: false }, { data, schema, jsonAst, jsonRaw }) {
+	constructor(
+		options = { isIdentifierLocation: false },
+		{ data, schema, jsonAst, jsonRaw, colors },
+	) {
 		this.options = options;
 		this.data = data;
 		this.schema = schema;
 		this.jsonAst = jsonAst;
 		this.jsonRaw = jsonRaw;
+		this.colors = colors;
 	}
 
 	getLocation(dataPath = this.instancePath) {
@@ -39,6 +43,9 @@ export default class BaseValidationError {
 			: this.options.dataPath;
 	}
 
+	/**
+	 * @returns {string[]}
+	 */
 	print() {
 		throw new Error(`Implement the 'print' method inside ${this.constructor.name}!`);
 	}

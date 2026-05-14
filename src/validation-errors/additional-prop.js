@@ -1,7 +1,4 @@
-import { bold, red, magenta } from "kleur/colors";
 import BaseValidationError from "./base";
-
-const ADDITIONAL_PROPERTY = bold("ADDITIONAL PROPERTY");
 
 export default class AdditionalPropValidationError extends BaseValidationError {
 	constructor(...args) {
@@ -11,12 +8,13 @@ export default class AdditionalPropValidationError extends BaseValidationError {
 
 	print() {
 		const { message, params } = this.options;
-		const line = red(`${ADDITIONAL_PROPERTY} ${message}`);
+		const { error, property, bold } = this.colors;
+		const line = error(`${bold("ADDITIONAL PROPERTY")} ${message}`);
 		const output = [`${line}\n`];
 
 		return output.concat(
 			this.getCodeFrame(
-				`${magenta(params.additionalProperty)} is not expected to be here!`,
+				`${property(params.additionalProperty)} is not expected to be here!`,
 				`${this.instancePath}/${params.additionalProperty}`,
 			),
 		);

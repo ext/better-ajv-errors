@@ -1,7 +1,4 @@
-import { bold, red, magenta } from "kleur/colors";
 import BaseValidationError from "./base";
-
-const REQUIRED = bold("REQUIRED");
 
 export default class RequiredValidationError extends BaseValidationError {
 	getLocation(dataPath = this.instancePath) {
@@ -11,10 +8,11 @@ export default class RequiredValidationError extends BaseValidationError {
 
 	print() {
 		const { message, params } = this.options;
-		const line = red(`${REQUIRED} ${message}`);
+		const { error, property, bold } = this.colors;
+		const line = error(`${bold("REQUIRED")} ${message}`);
 		const output = [`${line}\n`];
 
-		return output.concat(this.getCodeFrame(`${magenta(params.missingProperty)} is missing here!`));
+		return output.concat(this.getCodeFrame(`${property(params.missingProperty)} is missing here!`));
 	}
 
 	getError() {

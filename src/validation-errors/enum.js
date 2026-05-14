@@ -1,9 +1,6 @@
-import { bold, red, magenta } from "kleur/colors";
 import leven from "leven";
 import pointer from "jsonpointer";
 import BaseValidationError from "./base";
-
-const ENUM = bold("ENUM");
 
 export default class EnumValidationError extends BaseValidationError {
 	print() {
@@ -11,16 +8,17 @@ export default class EnumValidationError extends BaseValidationError {
 			message,
 			params: { allowedValues },
 		} = this.options;
+		const { error, property, bold } = this.colors;
 		const bestMatch = this.findBestMatch();
 
-		const line1 = red(`${ENUM} ${message}`);
-		const line2 = red(`(${allowedValues.join(", ")})`);
+		const line1 = error(`${bold("ENUM")} ${message}`);
+		const line2 = error(`(${allowedValues.join(", ")})`);
 		const output = [line1, `${line2}\n`];
 
 		return output.concat(
 			this.getCodeFrame(
 				bestMatch !== null
-					? `Did you mean ${magenta(bestMatch)} here?`
+					? `Did you mean ${property(bestMatch)} here?`
 					: `Unexpected value, should be equal to one of the allowed values`,
 			),
 		);

@@ -4,7 +4,22 @@ import { parse } from "@humanwhocodes/momoa";
 import { getSchemaAndData } from "../../test-helpers";
 import EnumValidationError from "../enum";
 
+const colors = {
+	error: (text) => `<red>${text}</color>`,
+	property: (text) => `<magenta>${text}</color>`,
+	bold: (text) => `<bold>${text}</intensity>`,
+};
+
 const fixturePath = path.join(__dirname, "..", "__fixtures__");
+
+expect.addSnapshotSerializer({
+	serialize(text) {
+		return String(text);
+	},
+	test(val) {
+		return typeof val === "string";
+	},
+});
 
 describe("Enum", () => {
 	describe("when value is an object", () => {
@@ -24,10 +39,10 @@ describe("Enum", () => {
 					params: { allowedValues: ["foo", "bar"] },
 					message: `should be equal to one of the allowed values`,
 				},
-				{ data, schema, jsonRaw, jsonAst },
+				{ data, schema, jsonRaw, jsonAst, colors },
 			);
 
-			expect(error.print()).toMatchSnapshot();
+			expect(error.print().join("\n")).toMatchSnapshot();
 		});
 
 		it("prints correctly for no levenshtein match", () => {
@@ -39,10 +54,10 @@ describe("Enum", () => {
 					params: { allowedValues: ["one", "two"] },
 					message: `should be equal to one of the allowed values`,
 				},
-				{ data, schema, jsonRaw, jsonAst },
+				{ data, schema, jsonRaw, jsonAst, colors },
 			);
 
-			expect(error.print()).toMatchSnapshot();
+			expect(error.print().join("\n")).toMatchSnapshot();
 		});
 
 		it("prints correctly for empty value", () => {
@@ -54,10 +69,10 @@ describe("Enum", () => {
 					params: { allowedValues: ["foo", "bar"] },
 					message: `should be equal to one of the allowed values`,
 				},
-				{ data, schema, jsonRaw, jsonAst },
+				{ data, schema, jsonRaw, jsonAst, colors },
 			);
 
-			expect(error.print(schema, { id: "" })).toMatchSnapshot();
+			expect(error.print(schema, { id: "" }).join("\n")).toMatchSnapshot();
 		});
 	});
 
@@ -80,10 +95,10 @@ describe("Enum", () => {
 					},
 					message: "should be equal to one of the allowed values",
 				},
-				{ data, schema, jsonRaw, jsonAst },
+				{ data, schema, jsonRaw, jsonAst, colors },
 			);
 
-			expect(error.print()).toMatchSnapshot();
+			expect(error.print().join("\n")).toMatchSnapshot();
 		});
 
 		it("prints correctly for no levenshtein match", () => {
@@ -97,10 +112,10 @@ describe("Enum", () => {
 					},
 					message: "should be equal to one of the allowed values",
 				},
-				{ data, schema, jsonRaw, jsonAst },
+				{ data, schema, jsonRaw, jsonAst, colors },
 			);
 
-			expect(error.print()).toMatchSnapshot();
+			expect(error.print().join("\n")).toMatchSnapshot();
 		});
 
 		it("prints correctly for empty value", () => {
@@ -114,10 +129,10 @@ describe("Enum", () => {
 					},
 					message: "should be equal to one of the allowed values",
 				},
-				{ data, schema, jsonRaw, jsonAst },
+				{ data, schema, jsonRaw, jsonAst, colors },
 			);
 
-			expect(error.print(schema, "")).toMatchSnapshot();
+			expect(error.print(schema, "").join("\n")).toMatchSnapshot();
 		});
 	});
 });

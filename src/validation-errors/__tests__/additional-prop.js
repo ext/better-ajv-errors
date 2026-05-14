@@ -4,7 +4,22 @@ import { parse } from "@humanwhocodes/momoa";
 import { getSchemaAndData } from "../../test-helpers";
 import AdditionalPropValidationError from "../additional-prop";
 
+const colors = {
+	error: (text) => `<red>${text}</color>`,
+	property: (text) => `<magenta>${text}</color>`,
+	bold: (text) => `<bold>${text}</intensity>`,
+};
+
 const fixturePath = path.join(__dirname, "..", "..", "__fixtures__");
+
+expect.addSnapshotSerializer({
+	serialize(text) {
+		return String(text);
+	},
+	test(val) {
+		return typeof val === "string";
+	},
+});
 
 describe("Additional properties", () => {
 	let schema, data, jsonRaw, jsonAst;
@@ -23,9 +38,9 @@ describe("Additional properties", () => {
 				params: { additionalProperty: "bar" },
 				message: "should NOT have additional properties",
 			},
-			{ data, schema, jsonRaw, jsonAst },
+			{ data, schema, jsonRaw, jsonAst, colors },
 		);
 
-		expect(error.print()).toMatchSnapshot();
+		expect(error.print().join("\n")).toMatchSnapshot();
 	});
 });

@@ -4,7 +4,22 @@ import { parse } from "@humanwhocodes/momoa";
 import { getSchemaAndData } from "../../test-helpers";
 import RequiredValidationError from "../required";
 
+const colors = {
+	error: (text) => `<red>${text}</color>`,
+	property: (text) => `<magenta>${text}</color>`,
+	bold: (text) => `<bold>${text}</intensity>`,
+};
+
 const fixturePath = path.join(__dirname, "..", "__fixtures__");
+
+expect.addSnapshotSerializer({
+	serialize(text) {
+		return String(text);
+	},
+	test(val) {
+		return typeof val === "string";
+	},
+});
 
 describe("Required", () => {
 	it("prints correctly for missing required prop", async () => {
@@ -20,9 +35,9 @@ describe("Required", () => {
 				params: { missingProperty: "id" },
 				message: `should have required property 'id'`,
 			},
-			{ data, schema, jsonRaw, jsonAst },
+			{ data, schema, jsonRaw, jsonAst, colors },
 		);
 
-		expect(error.print()).toMatchSnapshot();
+		expect(error.print().join("\n")).toMatchSnapshot();
 	});
 });

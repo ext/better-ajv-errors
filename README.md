@@ -135,3 +135,47 @@ Default: `null`
 
 Raw JSON payload used when formatting codeframe.
 Gives accurate line and column listings.
+
+##### colors
+
+Type: `Object`  
+Default: `{}` (no colors)
+
+Color functions applied to CLI output.
+Each key is optional - omitted keys default to a passthrough `(text) => text` function, producing plain text.
+
+| Key        | Role                                        |
+| ---------- | ------------------------------------------- |
+| `error`    | Error message lines                         |
+| `property` | Property/value names in code frames         |
+| `bold`     | Error type labels (e.g. `ENUM`, `REQUIRED`) |
+
+Using native `node:util`:
+
+```js
+import { styleText } from "node:util";
+import betterAjvErrors from "@sidvind/better-ajv-errors";
+
+const output = betterAjvErrors(schema, data, errors, {
+  colors: {
+    error: styleText.bind(undefined, "red"),
+    property: styleText.bind(undefined, "magenta"),
+    bold: styleText.bind(undefined, "bold"),
+  },
+});
+```
+
+Or a third-party dependency:
+
+```js
+import * as kleur from "kleur/colors";
+import betterAjvErrors from "@sidvind/better-ajv-errors";
+
+const output = betterAjvErrors(schema, data, errors, {
+  colors: {
+    error: kleur.red,
+    property: kleur.magenta,
+    bold: kleur.bold,
+  },
+});
+```
