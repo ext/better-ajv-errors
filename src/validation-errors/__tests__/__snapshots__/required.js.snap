@@ -1,12 +1,10 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Required > prints correctly for missing required prop 1`] = `
-[
-  <red><bold>REQUIRED</intensity> should have required property 'id'</color>
-,
-    1 | {
+<red><bold>REQUIRED</intensity> should have required property 'id'</color>
+
+  1 | {
 > 2 |   "nested": {}
     |             ^ <magenta>id</color> is missing here!
-  3 | },
-]
+  3 | }
 `;

@@ -63,7 +63,6 @@
   "dependencies": {
     "@humanwhocodes/momoa": "3.3.10",
     "jsonpointer": "5.0.1",
-    "kleur": "^4.1.0",
     "leven": "3.1.0"
   },
   "devDependencies": {
@@ -86,7 +85,6 @@
     "husky": "9.1.7",
     "is-ci": "4.1.0",
     "npm-pkg-lint": "5.1.0",
-    "pretty-ansi": "4.0.0",
     "vitest": "4.1.6"
   },
   "peerDependencies": {
@@ -95,7 +93,5 @@
   "engines": {
     "node": "^22.12 || >= 24.0"
   },
-  "externalDependencies": [
-    "kleur"
-  ]
+  "externalDependencies": []
 }

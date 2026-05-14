@@ -6,6 +6,11 @@ import { getSchemaAndData } from "../test-helpers";
 import betterAjvErrors from "../";
 
 const fixturePath = path.join(__dirname, "..", "__fixtures__");
+const colors = {
+	error: (text) => `<red>${text}</color>`,
+	property: (text) => `<magenta>${text}</color>`,
+	bold: (text) => `<bold>${text}</intensity>`,
+};
 
 function ajv8() {
 	return new Ajv8();
@@ -29,6 +34,7 @@ describe.each([
 		const res = betterAjvErrors(schema, data, validate.errors, {
 			format: "cli",
 			indent: 2,
+			colors: colors,
 		});
 		expect(res).toMatchSnapshot();
 	});
@@ -43,6 +49,7 @@ describe.each([
 		const res = betterAjvErrors(schema, data, validate.errors, {
 			format: "cli",
 			json,
+			colors: colors,
 		});
 		expect(res).toMatchSnapshot();
 	});
@@ -57,6 +64,7 @@ describe.each([
 		const res = betterAjvErrors(schema, data, validate.errors, {
 			format: "cli",
 			indent: 2,
+			colors: colors,
 		});
 		expect(res).toMatchSnapshot();
 	});
@@ -70,6 +78,7 @@ describe.each([
 		const res = betterAjvErrors(schema, data, validate.errors, {
 			format: "cli",
 			indent: 2,
+			colors: colors,
 		});
 		expect(res).toMatchSnapshot();
 	});

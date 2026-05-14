@@ -1,13 +1,13 @@
-import { bold, red, magenta } from "kleur/colors";
 import BaseValidationError from "./base";
 
 export default class DefaultValidationError extends BaseValidationError {
 	print() {
 		const { keyword, message } = this.options;
-		const line = red(`${bold(keyword.toUpperCase())} ${message}`);
+		const { error, property, bold } = this.colors;
+		const line = error(`${bold(keyword.toUpperCase())} ${message}`);
 		const output = [`${line}\n`];
 
-		return output.concat(this.getCodeFrame(`${magenta(keyword)} ${message}`));
+		return output.concat(this.getCodeFrame(`${property(keyword)} ${message}`));
 	}
 
 	getError() {

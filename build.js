@@ -23,7 +23,6 @@ esbuild
 	.build({
 		...(isEsmBuild ? config.esm : config.cjs),
 		entryPoints: ["src/index.js"],
-		external: ["kleur"],
 		bundle: true,
 		sourcemap: true,
 		logLevel: isCI ? "silent" : "info",

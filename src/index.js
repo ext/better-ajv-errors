@@ -1,8 +1,9 @@
 import { parse } from "@humanwhocodes/momoa";
 import prettify from "./helpers";
+import { normalizeColors } from "./colors";
 
 export default (schema, data, errors, options = {}) => {
-	const { format = "cli", indent = null, json = null } = options;
+	const { format = "cli", indent = null, json = null, colors } = options;
 
 	const jsonRaw = json || JSON.stringify(data, null, indent);
 	const jsonAst = parse(jsonRaw);
@@ -14,6 +15,7 @@ export default (schema, data, errors, options = {}) => {
 		schema,
 		jsonAst,
 		jsonRaw,
+		colors: normalizeColors(colors),
 	});
 
 	if (format === "cli") {
