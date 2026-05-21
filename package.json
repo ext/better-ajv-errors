@@ -72,7 +72,7 @@
     "@html-validate/prettier-config": "4.0.0",
     "@html-validate/release-scripts": "7.2.2",
     "@types/node": "22.19.19",
-    "@vitest/coverage-v8": "4.1.6",
+    "@vitest/coverage-v8": "4.1.7",
     "@vitest/eslint-plugin": "1.6.17",
     "ajv": "8.20.0",
     "ajv8": "npm:ajv@8.0.0",
@@ -85,7 +85,7 @@
     "husky": "9.1.7",
     "is-ci": "4.1.0",
     "npm-pkg-lint": "5.1.0",
-    "vitest": "4.1.6"
+    "vitest": "4.1.7"
   },
   "peerDependencies": {
     "ajv": "^8.0.0"
