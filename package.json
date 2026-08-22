@@ -61,7 +61,7 @@
   },
   "prettier": "@html-validate/prettier-config",
   "dependencies": {
-    "@humanwhocodes/momoa": "3.3.10",
+    "@humanwhocodes/momoa": "3.3.12",
     "jsonpointer": "5.0.1",
     "leven": "3.1.0"
   },
