@@ -59,6 +59,10 @@
     "test": "vitest run",
     "test-ci": "vitest run --coverage"
   },
+  "allowScripts": {
+    "esbuild": true,
+    "fsevents": true
+  },
   "prettier": "@html-validate/prettier-config",
   "dependencies": {
     "@humanwhocodes/momoa": "3.3.13",
@@ -69,7 +73,7 @@
     "@changesets/cli": "3.0.3",
     "@changesets/write": "1.0.1",
     "@eslint/js": "10.0.1",
-    "@html-validate/prettier-config": "4.1.16",
+    "@html-validate/prettier-config": "4.1.17",
     "@html-validate/release-scripts": "7.6.16",
     "@types/node": "22.19.19",
     "@vitest/coverage-v8": "5.0.5",
@@ -92,10 +96,6 @@
   },
   "engines": {
     "node": "^22.12 || >= 24.0"
-  },
-  "allowScripts": {
-    "esbuild": true,
-    "fsevents": true
   },
   "externalDependencies": []
 }
