@@ -88,7 +88,7 @@
     "globals": "17.14.0",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
-    "npm-pkg-lint": "5.5.0",
+    "npm-pkg-lint": "5.5.1",
     "vitest": "5.1.2"
   },
   "peerDependencies": {
