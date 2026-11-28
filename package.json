@@ -82,7 +82,7 @@
     "ajv8": "npm:ajv@8.0.0",
     "esbuild": "0.28.2",
     "eslint": "10.15.0",
-    "eslint-config-prettier": "10.1.8",
+    "eslint-config-prettier": "10.1.9",
     "eslint-plugin-prettier": "5.5.7",
     "git-format-staged": "4.0.2",
     "globals": "17.14.0",
